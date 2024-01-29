@@ -1,12 +1,35 @@
-record Geometry(int x, int y) {};
-record Icon(String marker) {};
+public class Building implements Mappable{
+  private String name;
+  private String usage;
 
-interface Mappable {
-  String label();
-  Geometry point();
-  Icon marker();
-}
+  public Building(String name, String usage) {
+    this.name = name;
+    this.usage = usage;
+  }
 
-public class Building {
+  public String getName() {
+    return name;
+  }
 
+  public String getUsage() {
+    return usage.toUpperCase();
+  }
+
+  @Override
+  public String label() {
+    return """
+        %s (%s)
+        """.formatted(getName(), getUsage())
+    ;
+  }
+
+  @Override
+  public Geometry geometryType() {
+    return Geometry.POINT;
+  }
+
+  @Override
+  public String marker() {
+    return "RED STAR";
+  }
 }
