@@ -32,4 +32,9 @@ public class Building implements Mappable{
   public String marker() {
     return "RED STAR";
   }
+
+  @Override
+  public void printProperties(Mappable item) {
+
+  }
 }

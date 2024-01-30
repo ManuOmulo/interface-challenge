@@ -32,4 +32,9 @@ public class UtilityLine implements Mappable{
   public String marker() {
     return "GREEN DOTTED";
   }
+
+  @Override
+  public void printProperties(Mappable item) {
+
+  }
 }
