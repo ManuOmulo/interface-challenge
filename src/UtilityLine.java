@@ -18,8 +18,7 @@ public class UtilityLine implements Mappable{
   @Override
   public String label() {
     return """
-        %s (%s)
-        """.formatted(getName(), getUtility())
+        %s (%s)""".formatted(getName(), getUtility())
     ;
   }
 
@@ -31,10 +30,5 @@ public class UtilityLine implements Mappable{
   @Override
   public String marker() {
     return "GREEN DOTTED";
-  }
-
-  @Override
-  public void printProperties(Mappable item) {
-
   }
 }

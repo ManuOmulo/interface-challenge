@@ -18,8 +18,7 @@ public class Building implements Mappable{
   @Override
   public String label() {
     return """
-        %s (%s)
-        """.formatted(getName(), getUsage())
+        %s (%s)""".formatted(getName(), getUsage())
     ;
   }
 
@@ -31,10 +30,5 @@ public class Building implements Mappable{
   @Override
   public String marker() {
     return "RED STAR";
-  }
-
-  @Override
-  public void printProperties(Mappable item) {
-
   }
 }
